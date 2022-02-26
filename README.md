@@ -1,4 +1,4 @@
-![Header](https://github.com/fyrfli/fyrfli/blob/231f67130405b6bfb555661403933cb02a1796ae/bg.png)
+![](https://github.com/fyrfli/fyrfli/blob/231f67130405b6bfb555661403933cb02a1796ae/bg.png)
 
 # 👋🏾 Hi, I’m @fyrfli 
 
