@@ -1,37 +1,30 @@
-## Welcome to GitHub Pages
+![Header](https://github.com/fyrfli/fyrfli/blob/231f67130405b6bfb555661403933cb02a1796ae/bg.png)
 
-You can use the [editor on GitHub](https://github.com/fyrfli/fyrfli.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+# 👋🏾 Hi, I’m @fyrfli 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+&#x1f913; My real name is Camille Frantz. I was born in 🇯🇲[Kingston, Jamaica](https://en.wikipedia.org/wiki/Kingston,_Jamaica) and am now living in 🇺🇸[Missouri, United States](https://en.wikipedia.org/wiki/Missouri) with my active duty Military husband and 2 🐕puppers.
 
-### Markdown
+&#x1f615; I am a programmer who became a system and database administrator, who then did some writing and editing, which then turned into facilitative mediation, which led to a social work degree before I realised my calling was right back where I started neck-deep in code.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+👀 I'm curious by nature so I dig deep and learn about all sorts of things. I've taught myself git (just enough to manage my own code through Nova and VSCode), docker (just enough to run a few self-hosted apps including Gitlab), nginx (necessary to host my own websites and a reverse proxy), among other tools and I am currently working on a deeper understanding of frontend coding on 🎓[Udemy](https://udemy.com).
 
-```markdown
-Syntax highlighted code block
+✍🏾 I'm working on a [chronicle of my journey](https://camille.fyrfli.io) from hobby coder to professional web developer and it's hosted on my self-hosted Gitlab.
 
-# Header 1
-## Header 2
-### Header 3
+❤️ When I am not coding, I am playing 🎮video games or 📖reading or 📺binge watching some true crime series or movies. I've also been known to take 📷photographs. I am working on building a [🖼️photo gallery](https://photos.fyrfli.me) to showcase some of my better pieces. The gallery itself is a sorely neglected work in progress.
 
-- Bulleted
-- List
+👍 Some of my favourite resources are:
 
-1. Numbered
-2. List
+- [CSS-Tricks](https://css-tricks.com)
+- [Frontend Mentor](https://frontendmentor.io)
+- [MDN](https://developer.mozilla.org)
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+---
 
-### Jekyll Themes
+![](https://img.shields.io/badge/OS-Linux-green) ![](https://img.shields.io/badge/Shell-bash-green) ![](https://img.shields.io/badge/Code-HTML-green) ![](https://img.shields.io/badge/Code-CSS-green) ![](https://img.shields.io/badge/Code-Markdown-green) ![](https://img.shields.io/badge/Tool-git-green) ![](https://img.shields.io/badge/Tool-nginx-green) ![](https://img.shields.io/badge/Editor-VSCode-green) ![](https://img.shields.io/badge/Editor-Nova-green) ![](https://img.shields.io/badge/Editor-vi-green) ![](https://img.shields.io/badge/Platform-Wordpress-green) 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/fyrfli/fyrfli.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<!---
+fyrfli/fyrfli is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+You can click the Preview link to take a look at your changes.
+--->
