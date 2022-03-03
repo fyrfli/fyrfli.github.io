@@ -70,10 +70,10 @@ body {
 .favourite-links {
     margin: 1rem auto;
 }
-.favourite-links a:any-link {
+a:any-link {
     color: var(--link-colour);
     text-decoration: underline dotted;
-    text-shadow: 2px 2px 18px var(--link-colour);
+    text-shadow: 2px 2px 12px var(--link-colour);
 }
 .main-nav {
     align-self: center;
@@ -106,6 +106,9 @@ body {
 }
 .main-nav__item:hover {
     transform: scale(1.08);
+}
+.main-nav__item a:any-link {
+    text-shadow: none;
 }
 
 @media screen and (max-width: 800px) {
