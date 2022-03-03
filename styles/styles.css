@@ -103,6 +103,8 @@ a:any-link {
     border-radius: 20px;
     transition: transform .6s;
     box-shadow: 0 0 8px var(--button-colour);
+    font: inherit;
+    text-transform: inherit;
 }
 .main-nav__item:hover {
     transform: scale(1.08);
