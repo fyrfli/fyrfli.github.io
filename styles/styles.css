@@ -1,0 +1,139 @@
+/* generics */
+:root {
+    --background-grey: hsla(0, 0%, 83%, 0.8);
+    --text-colour: hsl(0, 100%, 25%);
+    --button-colour: hsla(0, 100%, 25%, 0.65);
+    --button-text: hsla(0, 0%, 100%, 0.623);
+    --shadow-grey: hsla(0, 3%, 71%, 0.8);
+    --link-colour: hsl(114, 47%, 12%);
+    --link-colour-shadow: hsla(114, 47%, 12%, 0.2);
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    box-sizing: border-box;
+}
+html {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: var(--text-colour);
+    font-size: 18px;
+}
+body {
+    background-color: var(--background-grey);
+    text-transform: lowercase;
+}
+/* end generics */
+
+.headline {
+    text-align: center;
+    margin: 2rem 1rem;
+}
+.container {
+    display: flex;
+    width: 100%;
+}
+.leftbar {
+    background-image: url("../images/DSC_2339.JPG");
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 140vw;
+    background-size: cover;
+    background-position: left;
+}
+.main__items {
+    display: flex;
+    gap: 2rem;
+    /* margin: 2rem 1rem; */
+    width: 260vh;
+    height: 100vh;
+    flex-flow: column wrap;
+}
+.preamble__items {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.6rem;
+    overflow: hidden auto;
+}
+.preamble__items h2 {
+    text-align: center;
+    margin: 0 4rem;
+}
+.preamble__item {
+    width: 45vw;
+    margin: auto;
+    text-align: center;
+}
+.favourite-links {
+    margin: 1rem auto;
+}
+.favourite-links a:any-link {
+    color: var(--link-colour);
+    text-decoration: underline dotted;
+    text-shadow: 2px 2px 18px var(--link-colour);
+}
+.main-nav {
+    align-self: center;
+    margin: 2rem 1rem;
+}
+.main-nav h2 {
+    text-align: center;
+    margin: 1rem 0;
+}
+.main-nav__items {
+    display: flex;
+    gap: .8rem;
+    flex-flow: row wrap;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 1rem;
+}
+.main-nav__items a:any-link {
+    color: var(--button-text);
+}
+.main-nav__item {
+    background-color: var(--button-colour);
+    padding: 8px 8px;
+    width: 160px;
+    color: var(--button-text);
+    text-align: center;
+    border-radius: 20px;
+    transition: transform .6s;
+    box-shadow: 0 0 8px var(--button-colour);
+}
+.main-nav__item:hover {
+    transform: scale(1.08);
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        flex-flow: row wrap;
+    }
+    .leftbar {
+        background-size: contain;
+        height: 60vh;
+        /* width: 100vh; */
+        /* height: auto; */
+        background-position: top;
+        margin: 0;
+    }
+    .preamble__items {
+        overflow: unset;
+    }
+    .preamble__item {
+        width: auto;
+    }
+    .main-nav {
+        margin: 0;
+    }
+    .main-nav__items {
+        width: auto;
+        flex-flow: column nowrap;
+    }
+    .main-nav__item {
+        width: auto;
+    }
+}
