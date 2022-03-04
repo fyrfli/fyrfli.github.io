@@ -88,7 +88,7 @@ a:any-link {
     gap: .8rem;
     flex-flow: row wrap;
     justify-content: center;
-    justify-items: center;
+    align-content: center;
     margin-bottom: 1rem;
 }
 .main-nav__items a:any-link {
@@ -97,9 +97,8 @@ a:any-link {
 .main-nav__item {
     background-color: var(--button-colour);
     padding: 8px 8px;
-    width: 160px;
+    width: 200px;
     color: var(--button-text);
-    text-align: center;
     border-radius: 20px;
     transition: transform .6s;
     box-shadow: 0 0 8px var(--button-colour);
@@ -135,10 +134,12 @@ a:any-link {
         margin: 0;
     }
     .main-nav__items {
-        width: auto;
         flex-flow: column nowrap;
+        align-content: center;
+        justify-content: center;
+        margin: auto;
     }
     .main-nav__item {
-        width: auto;
+        width: 200px;
     }
 }
