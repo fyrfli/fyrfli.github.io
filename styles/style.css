@@ -87,14 +87,30 @@ button {
 .preamble__item a:any-link,
 .preamble__item a:active {
     color: var(--link-colour);
-    text-decoration: underline dotted;
-    text-underline-offset: 4px;
+    /* text-decoration: underline dotted;
+    text-underline-offset: 4px; */
     text-shadow: 0 2px 10px var(--link-colour-shadow);
 }
 
 .preamble__item a::after {
     content: "⤴︎";
 
+}
+
+.favourite-links {
+    width: 200px;
+    margin: 10px auto;
+    display: grid;
+    gap: 5px;
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: auto;
+}
+
+.favourite-links li {
+    border: 1px solid var(--link-colour);
+    padding: 4px 10px;
 }
 
 .main-nav__items {
@@ -104,7 +120,7 @@ button {
 }
 
 .main-nav h2 {
-    margin: 18px auto;
+    margin: 14px auto;
     text-decoration: underline dotted;
     text-underline-offset: 4px;
 }
@@ -146,6 +162,10 @@ button {
         height: 90vh;
         overflow: hidden auto;
     }
+    .main-nav {
+        width: 75%;
+        margin: auto;
+    }
 
     .main-nav__items {
         flex-flow: row wrap;
@@ -153,5 +173,10 @@ button {
 
     .main-nav__item {
         width: 180px;
+    }
+    .favourite-links {
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
     }
 }
