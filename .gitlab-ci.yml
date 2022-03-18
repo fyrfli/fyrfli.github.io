@@ -6,15 +6,15 @@ pages:
     - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
-    - ssh-keyscan $DO_IPADDRESS >> ~/.ssh/known_hosts
+    - ssh-keyscan $CFVM_IPADDRESS >> ~/.ssh/known_hosts
     - chmod 644 ~/.ssh/known_hosts
   script:
-    - ssh $SSH_USER@$CFVM_IPADDRESS "hostname && echo 'Welcome!!!' > $CFVM_HOME/welcome.txt"
+    - ssh $SSH_USER@$CFVM_IPADDRESS "hostname && echo 'Deploy date `date`' >> $THEIO_HOME/.deploy-log"
     - mkdir .public
     - cp -r images .public
     - cp -r styles .public
     - cp index.html .public
-    - scp -r .public/* $SSH_USER@$DO_IPADDRESS:$DOTHEIO_HOME
+    - scp -r .public/* $SSH_USER@$CFVM_IPADDRESS:$THEIO_HOME
     - rm -rf public
     - mv .public public
   artifacts:
