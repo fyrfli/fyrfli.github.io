@@ -1,13 +1,4 @@
-/* generics */
-:root {
-    --background-grey: hsla(0, 0%, 83%, 0.8);
-    --text-colour: hsl(0, 100%, 25%);
-    --button-colour: hsla(0, 100%, 25%, 0.65);
-    --button-text: hsla(0, 0%, 100%, 0.8);
-    --shadow-grey: hsla(0, 3%, 71%, 0.8);
-    --link-colour: hsl(114, 47%, 12%);
-    --link-colour-shadow: hsla(114, 47%, 12%, 0.2);
-}
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Lato&family=Montserrat&family=Poppins&family=Roboto&family=Roboto+Condensed&family=Source+Sans+Pro&family=Roboto+Slab&family=Raleway&family=Merriweather&family=Playfair+Display&family=Lora&family=Noto+Serif&family=Libre+Baskerville  &display=swap');
 
 * {
     margin: 0;
@@ -16,167 +7,124 @@
     list-style: none;
     text-decoration: none;
     border: none;
+    box-sizing: border-box;
 }
 
-html {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: var(--text-colour);
-    font-size: 18px;
+a:any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.feather {
+    display: block;
+    margin: auto;
+    width: 22px;
+    height: 22px;
 }
 
 body {
-    background-color: var(--background-grey);
-    text-transform: lowercase;
-    margin: 2rem auto;
-}
-
-
-form {
-    display: inline;
-}
-
-
-button {
-    padding: 8px 12px;
-    background-color: var(--button-colour);
-    color: var(--button-text);
-    font-family: inherit;
-    font-size: 16px;
-    border-radius: 18px;
-    width: 240px;
-    text-transform: inherit;
-}
-
-/* end generics */
-
-.container {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-content: center;
-    gap: 10px;
-}
-
-.leftbar {
-    background-image: url("../images/profile-picture.png");
+    font-family: "Noto Serif", serif;
+    width: 95vw;
+    margin: 1rem auto;
+    color: maroon;
+    height: 100%;
+    background: linear-gradient(to left bottom, burlywood, beige);
     background-repeat: no-repeat;
-    height: 40vh;
     background-size: cover;
-    overflow: hidden;
-    border-radius: 4px;
+    background-attachment: fixed;
+    text-transform: lowercase;
 }
 
-.main__items {
+.nav-items {
     display: flex;
     gap: 1rem;
-    flex-flow: column nowrap;
-    text-align: center;
-    align-items: center;
     justify-content: center;
-    width: 96vw;
-    align-self: center;
+    padding: 0.8rem;
+    color: darkgreen;
+    border-bottom: 1px dashed grey;
 }
 
-.preamble__items {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 1rem;
-    overflow: hidden auto;
-}
-
-.preamble__item a:any-link,
-.preamble__item a:active {
-    color: var(--link-colour);
-    /* text-decoration: underline dotted;
-    text-underline-offset: 4px; */
-    text-shadow: 0 2px 10px var(--link-colour-shadow);
-}
-
-.preamble__item a::after {
-    content: "⤴︎";
-
-}
-
-.favourite-links {
-    width: 200px;
-    margin: 10px auto;
-    display: grid;
-    gap: 5px;
-    align-items: center;
-    justify-items: center;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: auto;
-}
-
-.favourite-links li {
-    border: 1px solid var(--link-colour);
-    padding: 4px 10px;
-}
-
-.main-nav__items {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 18px;
-}
-
-.main-nav h2 {
-    margin: 14px auto;
-    text-decoration: underline dotted;
-    text-underline-offset: 4px;
-}
-
-.main-nav__item {
-    padding: 8px;
-    background-color: var(--button-colour);
-    color: var(--button-text);
-    font-family: inherit;
-    font-size: 16px;
-    border-radius: 18px;
-    width: 240px;
-    text-transform: inherit;
+header img {
+    display: block;
+    border-radius: 50%;
+    width: 180px;
+    border: 4px ridge darkgreen;
     margin: auto;
-    transition: transform 1s;
 }
 
-.main-nav__item:hover {
-    transform: scale(1.08);
+main {
+    padding: 1rem;
 }
 
-@media screen and (min-width: 800px) {
+.intro h2 {
+    text-align: center;
+}
+
+.intro p {
+    padding: 0.8rem auto;
+}
+.intro p::first-letter {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.education {
+    width: 95%;
+    padding: 2rem auto;
+    margin: auto;
+}
+.education h2 {
+    font-size: 18px;
+    text-align: center;
+    padding: 1.8rem 0 0.2rem;
+}
+
+.education h3 {
+    font-size: 16px;
+    text-align: center;
+    text-decoration: dotted underline;
+    text-underline-offset: 6px;
+    padding: 1rem 0 0.6rem;
+}
+
+.education li::before {
+    content: "‣ ";
+}
+
+footer {
+    width: 85%;
+    border-top: 1px dotted darkgreen;
+    text-align: center;
+    font-size: 14px;
+    padding: 1rem;
+    margin: 1rem auto 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
     body {
-        margin: 0 auto;
+        width: 80%;
     }
-
-    .container {
-        flex-flow: row nowrap;
-    }
-
-    .leftbar {
-        width: 50vw;
-        height: 100vh;
-        background-size: cover;
-    }
-
-    .main__items {
-        width: 50vw;
-        height: 90vh;
-        overflow: hidden auto;
-    }
-    .main-nav {
+    .education {
         width: 75%;
         margin: auto;
     }
-
-    .main-nav__items {
-        flex-flow: row wrap;
-    }
-
-    .main-nav__item {
-        width: 180px;
-    }
-    .favourite-links {
+    footer {
         width: 100%;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto;
+    }
+}
+
+@media only screen and (min-width: 980px) {
+    body {
+        width: 75vh;
+    }
+    .nav-items {
+        gap: 2rem;
+    }
+    .education {
+        width: 75%;
+        margin: auto;
+    }
+    footer {
+        width: 100%;
     }
 }
