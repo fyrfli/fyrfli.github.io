@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+@basecolour: #E7B232;
+@deeporangegrey: #4D4D4D;
+@medorangegrey: #666666;
+@brightburntorange: #E3A91C;
+@medburntorange: #EABB49;
+@paleburntorange: #F0CC76;
+@maroon: hsl(0, 100%, 25%);
+@palemaroon: hsla(0, 100%, 25%, 0.65);
+@deepdarkgreen: hsl(114, 47%, 12%);
+@palegrey: hsla(0, 0%, 83%, 0.8);
+@transparentgreen: hsla(114, 47%, 12%, 0.2);
+
+html {
+  font-family: "Cabin", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.icon-padding() {
+  padding: 0 0.2rem;
+}
+
+.hdr-padding () {
+  padding: 0.8rem 0;
+  margin: auto;
+  text-align: center;
+}
+
+
+//page styling
+body {
+  background: linear-gradient(-45deg, @medburntorange, @paleburntorange);
+  background-attachment: fixed;
+  color: @deeporangegrey;
+  line-height: 1.4rem;
+  margin-top: 1.8rem;
+}
+
+a:any-link {
+  color: @deepdarkgreen;
+}
+
+a:hover,
+a:active {
+  text-shadow: 0 0 8px @medorangegrey;
+}
+
+a::after {
+  content: " «";
+}
+
+a::before {
+  content: "» ";
+}
+
+//container basics
+.container {
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1.6rem;
+}
+
+//profile image styling
+.hero {
+  display: block;
+  width: 120px;
+  height: auto;
+  margin: auto;
+  border-radius: 50%;
+  box-shadow: 1px 2px 8px @medorangegrey;
+  border: 1px solid @deepdarkgreen;
+  flex: 1;
+  flex-basis: 100%;
+}
+
+//main items styling
+.main__items {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.main__hdr2 {
+  .hdr-padding();
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.main__hdr3 {
+  .hdr-padding();
+  font-size: 1.1rem;
+  text-align: center;
+  max-width: 365px;
+}
+
+//main text styling
+.background {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+.background__hdr {
+  text-transform: uppercase;
+  .hdr-padding();
+}
+
+.background__para {
+  background-color: @medburntorange;
+  border-top: 4px solid @palemaroon;
+  width: 365px;
+  height: 220px;
+  margin: auto;
+  line-height: 1.4rem;
+  padding: 1rem 0.8rem;
+  border-radius: 8px;
+  box-shadow: 1px 2px 8px @basecolour;
+}
+
+
+//interests styling
+.interests {
+  padding: 1.2rem;
+  width: 85vw;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  text-transform: lowercase;
+}
+
+.interest__item::after {
+  content: " ◦ ";
+}
+
+.links {
+  padding: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.main-nav__hdr {
+  .hdr-padding();
+}
+
+.socials {
+  padding: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+//styling for feathericons.com icons
+.feather {
+  width: 20px;
+  height: 20px;
+  .icon-padding();
+}
+
+//styling for lineawesome icons
+.las,
+.lar,
+.lab {
+  .icon-padding();
+}
+
+//styling for frontendmentor.io icon
+.fmico {
+  width: 20px;
+  height: 20px;
+  .icon-padding();
+}
+
+.footer {
+  font-size: 0.8rem;
+  text-align: center;
+  border-top: 1px solid @deeporangegrey;
+  padding-top: 1rem;
+  padding-bottom: 0.4rem;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .container {
+    justify-content: center;
+    margin: auto;
+  }
+
+  h3 {
+    width: 55vw;
+    margin: auto;
+  }
+
+  .background {
+    flex-flow: row wrap;
+  }
+
+  .background__hdr {
+    flex-basis: 100%;
+    .hdr-padding();
+  }
+
+  .background__para {
+    width: 40vw;
+  }
+
+  .interests {
+    width: 55vw;
+  }
+
+  .links {
+    width: 55vw;
+    margin: auto;
+  }
+
+  .socials {
+    width: 55vw;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  body {
+    width: 75vw;
+    margin: auto;
+    margin-top: 1.8rem;
+  }
+
+  .container {
+    justify-content: center;
+    margin: auto;
+  }
+
+  h3 {
+    width: 55vw;
+    margin: auto;
+  }
+
+  .background {
+    width: 75vw;
+    margin: auto;
+    flex-flow: row wrap;
+    gap: 0.9rem;
+  }
+
+  .background__hdr {
+    .hdr-padding();
+    flex-basis: 100%;
+  }
+
+  .interests {
+    width: 55vw;
+  }
+
+  .links {
+    width: 55vw;
+    margin: auto;
+  }
+
+  .socials {
+    width: 55vw;
+    margin: auto;
+  }
+}
