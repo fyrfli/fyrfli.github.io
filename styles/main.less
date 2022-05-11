@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;600;700&family=Merriweather+Sans:wght@300;400;500;600&display=swap');
 
 * {
   margin: 0;
@@ -21,8 +21,8 @@
 @deepdarkgreen: hsl(114, 47%, 12%);
 @palegrey: hsla(0, 0%, 83%, 0.8);
 @transparentgreen: hsla(114, 47%, 12%, 0.2);
-@deepdarkblue: midnightblue;
-@darkblue: darkblue;
+@deepdarkblue: rgb(19, 19, 94);
+@darkblue: rgb(12, 12, 152);
 @medblue: blue;
 @paleblue: lightblue;
 @slate: rgb(174, 192, 212);
@@ -35,8 +35,8 @@
 @deepbluegrey: #4d4d4d;
 
 html {
-  font-family: "Cabin", sans-serif;
-  font-size: 16px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 18px;
   font-weight: 400;
 }
 
@@ -65,7 +65,7 @@ html {
 
 //page styling
 body {
-  background: linear-gradient(-165deg, @deepdarkblue, @darkblue);
+  background: linear-gradient(to bottom right, @darkblue, @deepdarkblue);
   background-attachment: fixed;
   color: @slate;
   line-height: 1.4rem;
@@ -75,7 +75,7 @@ body {
 }
 
 a:any-link {
-  color: inherit;
+  color: @basecolour;
 }
 
 a:hover,
@@ -85,12 +85,12 @@ a:active {
 
 a::after {
   content: " «";
-  font-size: 0.4rem;
+  font-size: 1em;
 }
 
 a::before {
   content: "» ";
-  font-size: 0.4rem;
+  font-size: 1rem;
 }
 
 //header styling
@@ -109,15 +109,25 @@ a::before {
 
 //container basics
 .container {
-  max-width: 860px;
+  max-width: 920px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   margin: auto;
+  gap: 1.4rem;
+  align-items: baseline;
+
+  // how to make the items take up all available space
+
 }
 
-.top {
-  width: 100%;
+.top,
+.intro,
+.info,
+.interests,
+.links,
+.socials {
+  min-width: 365px;
 }
 
 .intro {
@@ -127,10 +137,15 @@ a::before {
   margin: auto;
 }
 
-.intro-hdr {
+.intro-hdr,
+.interests-hdr,
+.links-hdr,
+.socials-hdr {
+  padding: 1rem 0;
+  text-align: center;
   font-size: 1.2rem;
-  max-width: 365px;
-  min-width: 240px;
+  width: 375px;
+  margin: auto;
 }
 
 .avatar {
@@ -146,13 +161,67 @@ a::before {
 .links-hdr,
 .socials-hdr {
   .hdr-upcase();
+  flex-basis: 100%;
 }
 
+
+
 .info-para {
-  max-width: 365px;
+  max-width: 420px;
 }
 
 .info {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1.4rem;
+}
+
+
+//interests styling
+.interests {
+  padding: 1.2rem;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  text-transform: lowercase;
+  max-width: 600px;
+}
+
+.interests-item::after {
+  content: " ◦ ";
+}
+
+
+.links-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  max-width: 420px;
+}
+
+
+.socials-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  gap: 0.8rem;
+  max-width: 420px;
+}
+
+
+.footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dotted @slate;
+  text-align: center;
+  font-size: 0.7rem;
 }

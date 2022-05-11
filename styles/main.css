@@ -1,34 +1,51 @@
 @font-face {
-  font-family: 'Cabin';
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l521wRpXw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
-  font-stretch: normal;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/cabin/v24/u-4X0qWljRw-PfU81xCKCpdpbgZJl6XFpfEd7eA9BIxxkV2EL7E.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/merriweather/v30/u-440qyriQwlOrhSvowK_l5Oew.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Cabin';
-  font-style: normal;
-  font-weight: 500;
-  font-stretch: normal;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/cabin/v24/u-4X0qWljRw-PfU81xCKCpdpbgZJl6XFpfEd7eA9BIxxkW-EL7E.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Cabin';
-  font-style: normal;
-  font-weight: 600;
-  font-stretch: normal;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/cabin/v24/u-4X0qWljRw-PfU81xCKCpdpbgZJl6XFpfEd7eA9BIxxkYODL7E.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Cabin';
+  font-family: 'Merriweather';
   font-style: normal;
   font-weight: 700;
-  font-stretch: normal;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/cabin/v24/u-4X0qWljRw-PfU81xCKCpdpbgZJl6XFpfEd7eA9BIxxkbqDL7E.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l52xwNpXw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/merriweathersans/v21/2-cO9IRs1JiJN1FRAMjTN5zd9vgsFF_5asQTb6hZ2JKZ_O4ljg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/merriweathersans/v21/2-cO9IRs1JiJN1FRAMjTN5zd9vgsFF_5asQTb6hZ2JKZou4ljg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/merriweathersans/v21/2-cO9IRs1JiJN1FRAMjTN5zd9vgsFF_5asQTb6hZ2JKZkO4ljg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/merriweathersans/v21/2-cO9IRs1JiJN1FRAMjTN5zd9vgsFF_5asQTb6hZ2JKZfOkljg.ttf) format('truetype');
 }
 * {
   margin: 0;
@@ -40,12 +57,12 @@
   box-sizing: border-box;
 }
 html {
-  font-family: "Cabin", sans-serif;
-  font-size: 16px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 18px;
   font-weight: 400;
 }
 body {
-  background: linear-gradient(-165deg, midnightblue, darkblue);
+  background: linear-gradient(to bottom right, #0c0c98, #13135e);
   background-attachment: fixed;
   color: #aec0d4;
   line-height: 1.4rem;
@@ -54,7 +71,7 @@ body {
   scrollbar-width: none;
 }
 a:any-link {
-  color: inherit;
+  color: #E7B232;
 }
 a:hover,
 a:active {
@@ -62,11 +79,11 @@ a:active {
 }
 a::after {
   content: " «";
-  font-size: 0.4rem;
+  font-size: 1em;
 }
 a::before {
   content: "» ";
-  font-size: 0.4rem;
+  font-size: 1rem;
 }
 .header {
   display: flex;
@@ -82,14 +99,21 @@ a::before {
   box-shadow: 2px 2px 8px #4d4d4d;
 }
 .container {
-  max-width: 860px;
+  max-width: 920px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   margin: auto;
+  gap: 1.4rem;
+  align-items: baseline;
 }
-.top {
-  width: 100%;
+.top,
+.intro,
+.info,
+.interests,
+.links,
+.socials {
+  min-width: 365px;
 }
 .intro {
   display: flex;
@@ -97,10 +121,15 @@ a::before {
   justify-content: space-between;
   margin: auto;
 }
-.intro-hdr {
+.intro-hdr,
+.interests-hdr,
+.links-hdr,
+.socials-hdr {
+  padding: 1rem 0;
+  text-align: center;
   font-size: 1.2rem;
-  max-width: 365px;
-  min-width: 240px;
+  width: 375px;
+  margin: auto;
 }
 .avatar {
   border: 2px solid #4d4d4d;
@@ -116,11 +145,53 @@ a::before {
 .socials-hdr {
   font-variant: small-caps;
   text-align: center;
+  flex-basis: 100%;
 }
 .info-para {
-  max-width: 365px;
+  max-width: 420px;
 }
 .info {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1.4rem;
+}
+.interests {
+  padding: 1.2rem;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  text-transform: lowercase;
+  max-width: 600px;
+}
+.interests-item::after {
+  content: " ◦ ";
+}
+.links-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  max-width: 420px;
+}
+.socials-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  gap: 0.8rem;
+  max-width: 420px;
+}
+.footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dotted #aec0d4;
+  text-align: center;
+  font-size: 0.7rem;
 }
