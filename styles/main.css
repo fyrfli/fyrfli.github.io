@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cabin/v24/u-4X0qWljRw-PfU81xCKCpdpbgZJl6XFpfEd7eA9BIxxkV2EL7E.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cabin/v24/u-4X0qWljRw-PfU81xCKCpdpbgZJl6XFpfEd7eA9BIxxkW-EL7E.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cabin/v24/u-4X0qWljRw-PfU81xCKCpdpbgZJl6XFpfEd7eA9BIxxkYODL7E.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cabin/v24/u-4X0qWljRw-PfU81xCKCpdpbgZJl6XFpfEd7eA9BIxxkbqDL7E.ttf) format('truetype');
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Cabin", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+body {
+  background: linear-gradient(-165deg, midnightblue, darkblue);
+  background-attachment: fixed;
+  color: #aec0d4;
+  line-height: 1.4rem;
+  margin-top: 2rem;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+a:any-link {
+  color: inherit;
+}
+a:hover,
+a:active {
+  text-shadow: 0 0 8px hsla(0, 0%, 83%, 0.8);
+}
+a::after {
+  content: " «";
+  font-size: 0.4rem;
+}
+a::before {
+  content: "» ";
+  font-size: 0.4rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  width: 80vw;
+  margin: auto;
+  padding-bottom: 2rem;
+}
+.header-img {
+  border: 2px solid #4d4d4d;
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px #4d4d4d;
+}
+.container {
+  max-width: 860px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: auto;
+}
+.top {
+  width: 100%;
+}
+.intro {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: auto;
+}
+.intro-hdr {
+  font-size: 1.2rem;
+  max-width: 365px;
+  min-width: 240px;
+}
+.avatar {
+  border: 2px solid #4d4d4d;
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px #4d4d4d;
+  display: block;
+  width: 140px;
+  margin: auto;
+}
+.info-hdr,
+.interests-hdr,
+.links-hdr,
+.socials-hdr {
+  font-variant: small-caps;
+  text-align: center;
+}
+.info-para {
+  max-width: 365px;
+}
+.info {
+  display: flex;
+  flex-flow: column wrap;
+}

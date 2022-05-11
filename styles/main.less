@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+@basecolour: #E7B232;
+@deeporangegrey: #4D4D4D;
+@medorangegrey: #666666;
+@brightburntorange: #E3A91C;
+@medburntorange: #EABB49;
+@paleburntorange: #F0CC76;
+@maroon: hsl(0, 100%, 25%);
+@palemaroon: hsla(0, 100%, 25%, 0.65);
+@deepdarkgreen: hsl(114, 47%, 12%);
+@palegrey: hsla(0, 0%, 83%, 0.8);
+@transparentgreen: hsla(114, 47%, 12%, 0.2);
+@deepdarkblue: midnightblue;
+@darkblue: darkblue;
+@medblue: blue;
+@paleblue: lightblue;
+@slate: rgb(174, 192, 212);
+@lightgreen: #7fe6c0;
+@darkgreen: #043e27;
+@text: #222a18;
+@darkpurple: #5a084a;
+@lightpurple: #f58bc4;
+@linkshadow: rgb(61, 190, 111);
+@deepbluegrey: #4d4d4d;
+
+html {
+  font-family: "Cabin", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.icon-padding() {
+  padding: 0 0.2rem;
+}
+
+.hdr-padding () {
+  padding: 0.8rem 0;
+  margin: auto;
+  text-align: center;
+}
+
+.img-styling() {
+  border: 2px solid @deepbluegrey;
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px @deepbluegrey;
+}
+
+.hdr-upcase() {
+  font-variant: small-caps;
+  text-align: center;
+  // flex-basis: 100%;
+}
+
+
+//page styling
+body {
+  background: linear-gradient(-165deg, @deepdarkblue, @darkblue);
+  background-attachment: fixed;
+  color: @slate;
+  line-height: 1.4rem;
+  margin-top: 2rem;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+a:any-link {
+  color: inherit;
+}
+
+a:hover,
+a:active {
+  text-shadow: 0 0 8px @palegrey;
+}
+
+a::after {
+  content: " «";
+  font-size: 0.4rem;
+}
+
+a::before {
+  content: "» ";
+  font-size: 0.4rem;
+}
+
+//header styling
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  width: 80vw;
+  margin: auto;
+  padding-bottom: 2rem;
+}
+
+.header-img {
+  .img-styling();
+}
+
+//container basics
+.container {
+  max-width: 860px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: auto;
+}
+
+.top {
+  width: 100%;
+}
+
+.intro {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.intro-hdr {
+  font-size: 1.2rem;
+  max-width: 365px;
+  min-width: 240px;
+}
+
+.avatar {
+  .img-styling();
+  display: block;
+  width: 140px;
+  margin: auto;
+}
+
+
+.info-hdr,
+.interests-hdr,
+.links-hdr,
+.socials-hdr {
+  .hdr-upcase();
+}
+
+.info-para {
+  max-width: 365px;
+}
+
+.info {
+  display: flex;
+  flex-flow: column wrap;
+}
