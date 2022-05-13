@@ -182,14 +182,6 @@ a:hover,
 a:active {
   text-shadow: 0 0 8px hsla(0, 0%, 83%, 0.8);
 }
-a::after {
-  content: " «";
-  font-size: 1em;
-}
-a::before {
-  content: "» ";
-  font-size: 1rem;
-}
 .header {
   display: flex;
   justify-content: space-between;
