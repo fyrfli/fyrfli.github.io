@@ -187,6 +187,7 @@ a:active {
   justify-content: space-between;
   height: 10vh;
   width: 80vw;
+  max-width: 900px;
   margin: auto;
   padding-bottom: 2rem;
 }
@@ -247,7 +248,7 @@ a:active {
   flex-basis: 100%;
 }
 .info-para {
-  max-width: 420px;
+  max-width: 375px;
 }
 .info {
   display: flex;
